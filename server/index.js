@@ -1,7 +1,13 @@
 const express = require('express');
 const path = require('path');
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const app = express();
+
+if (!isDev) {
+	app.use(require('./middlewares/hot'));
+}
 
 app.use(express.static('./dist'));
 
