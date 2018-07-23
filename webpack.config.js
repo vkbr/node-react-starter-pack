@@ -4,12 +4,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const isDevelopment = process.env.NODE_EVN !== 'production';
 
+const devPlugins = isDevelopment ? [
+	new webpack.HotModuleReplacementPlugin(),
+] : [];
+
+const devEntries = [
+	'webpack-hot-middleware/client',
+];
+
 
 module.exports = {
 	mode: isDevelopment ? 'development' : 'production',
 	entry: [
 		'./src/index.js',
-		'webpack-hot-middleware/client',
+		...devEntries,
 	],
 	output: {
 		filename: 'app.js',
@@ -24,6 +32,6 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './src/index.html'
 		}),
-		new webpack.HotModuleReplacementPlugin(),
+		...devPlugins,
 	]
 };
