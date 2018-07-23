@@ -5,7 +5,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 const app = express();
 
-if (!isDev) {
+if (isDev) {
 	app.use(require('./middlewares/hot'));
 }
 
