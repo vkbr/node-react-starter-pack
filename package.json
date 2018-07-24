@@ -12,6 +12,7 @@
   "author": "https://github.com/vkbr",
   "license": "ISC",
   "dependencies": {
+    "emotion": "^9.2.6",
     "express": "^4.16.3",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
