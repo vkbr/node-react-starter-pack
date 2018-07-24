@@ -1,10 +1,6 @@
 # Node React started kit
 
-Minimilastic started kit for React/Node with webpack.
-
-## Module versions
-* React@16
-* webpack@4
+Minimilastic started kit for React/Node with webpack and hot module replacement.
 
 ## Getting started
 
@@ -17,3 +13,7 @@ Minimilastic started kit for React/Node with webpack.
 3. Start the app
 	- dev: `npm start`
 	- production/production-like: `npm run build && npm run server`
+
+## Module versions
+* React@16
+* webpack@4
