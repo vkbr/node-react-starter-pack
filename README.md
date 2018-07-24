@@ -16,4 +16,4 @@ Simple and lean started kit for React/Node with webpack.
 
 3. Start the app
 	- dev: `npm start`
-: `npm build && npm run server`
+	- production/production-like: `npm run build && npm run server`
