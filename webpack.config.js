@@ -1,37 +1,23 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const commonWebpackConfig = require('./webpack.config.common');
+const env = process.env.NODE_ENV || 'development';
 
-const isDevelopment = process.env.NODE_EVN !== 'production';
+let overrides;
+try {
+	overrides = require(`./webpack.config.${env}.js`);
+} catch (e) {
+	overrides = {};
+}
 
-const devPlugins = isDevelopment ? [
-	new webpack.HotModuleReplacementPlugin(),
-] : [];
+const {
+	mode = 'development',
+	entry = [],
+	plugins = [],
+} = overrides;
 
-const devEntries = [
-	'webpack-hot-middleware/client',
-];
+console.log(`Running webpack with 'webpack.config.${env}.js' overrides`);
 
-
-module.exports = {
-	mode: isDevelopment ? 'development' : 'production',
-	entry: [
-		'./src/index.js',
-		...devEntries,
-	],
-	output: {
-		filename: 'app.js',
-		path: path.resolve('./dist'),
-	},
-	module: {
-		rules: [
-			{ test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ },
-		]
-	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: './src/index.html'
-		}),
-		...devPlugins,
-	]
-};
+module.exports = commonWebpackConfig({
+	mode,
+	entry,
+	plugins,
+});

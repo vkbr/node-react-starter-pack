@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=development node ./server",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack -p",
-		"server": "NODE_ENV=production node ./server"
+    "server": "NODE_ENV=production node ./server"
   },
   "keywords": [],
   "author": "https://github.com/vkbr",
@@ -24,9 +24,11 @@
     "babel-loader": "^7.1.5",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
+    "connect-history-api-fallback": "^1.5.0",
     "html-webpack-plugin": "^3.2.0",
     "nodemon": "^1.18.3",
     "react-hot-loader": "^4.3.3",
+    "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-middleware": "^3.1.3",
