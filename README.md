@@ -14,6 +14,14 @@ Minimilastic started kit for React/Node with webpack and hot module replacement.
 	- dev: `npm start`
 	- production/production-like: `npm run build && npm run server`
 
+## Extra features
+
+Added/topup features are in different branches. Merge the required branch to master.
+
+### Emotion JS (CSS in JS)
+
+`git merge topup/emotions`
+
 ## Module versions
 * React@16
 * webpack@4
