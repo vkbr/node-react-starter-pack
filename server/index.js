@@ -11,7 +11,7 @@ if (isDev) {
 
 app.use(express.static('./dist'));
 
-app.get('*', (req, res) => res.sendFile(path.resolve('./dist/app.js')));
+app.get('*', (req, res) => res.sendFile(path.resolve('./dist/index.html')));
 
 app.listen(3000, () => {
 	console.log('Server in port 3000');
