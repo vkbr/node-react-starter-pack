@@ -19,7 +19,7 @@ const NewTodo = () => (
 			style={style}
 			placeholder="Todo..."
 			endAdornment={
-				<InputAdornment>
+				<InputAdornment position="end">
 					<IconButton>
 						<ChevronRightIcon style={{ color: '#aaa' }} />
 					</IconButton>
