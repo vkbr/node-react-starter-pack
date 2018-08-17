@@ -1,17 +1,36 @@
 import React from 'react';
+import styled, { css } from 'react-emotion';
 import { hot } from 'react-hot-loader'
 
+import Title from './components/Title';
+import TodoList from './containers/TodoList';
+
+const style = css`
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: Whitney,DIN,Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	background: #f7f9ff;
+`;
+
+document.body.classList.add(style);
+
+const Container = styled.div`
+	min-height: 100%;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	background: white;
+	box-shadow: 0 0 4px 0 rgba(0,0,0,.4);
+	padding: 20px 0;
+`;
+
 const App = () => (
-	<div>
-		<h1>
-			{
-				require('../package.json').name
-					.replace(/-/g, ' ')
-					.replace(/^[a-z]| [a-z]/g, a => a.toUpperCase())}
-		</h1>
-		<p>Entry point: <code>./src/index.js</code></p>
-		<p>Root React component: <code>./src/App.js</code></p>
-	</div>
+	<Container>
+		<Title>Saga todo</Title>
+		<TodoList />
+	</Container>
 );
 
-export default hot(module)(App)
+export default hot(module)(App);

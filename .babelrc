@@ -2,6 +2,9 @@
 	"presets": [
 		"react"
 	],
+	"plugins": [
+		"emotion"
+	],
 	"env": {
 		"development": {
 			"presets" : [
