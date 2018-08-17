@@ -12,16 +12,19 @@
   "author": "https://github.com/vkbr",
   "license": "ISC",
   "dependencies": {
+    "emotion": "^9.2.6",
     "express": "^4.16.3",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-emotion": "^9.2.6",
     "react-router": "^4.3.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-emotion": "^9.2.6",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
     "connect-history-api-fallback": "^1.5.0",
