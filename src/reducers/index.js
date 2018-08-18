@@ -1,3 +1,7 @@
-export default function(state = {}) {
-	return state;
-}
+import { combineReducers } from 'redux';
+
+import todo from './todo';
+
+export default combineReducers({
+	todo,
+});

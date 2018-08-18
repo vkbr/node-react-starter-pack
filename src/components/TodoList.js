@@ -9,9 +9,9 @@ const List = styled.ul`
 	margin: 0;
 `;
 
-const TodoList = ({ todos }) => (
+const TodoList = ({ todos, toggleTodo }) => (
 <List className="todo-list">
-	{todos.map((item) => <TodoItem key={item.id} {...item} />)}
+	{todos.map((item) => <TodoItem key={item.id} {...item} toggleTodo={toggleTodo} />)}
 </List>
 );
 

@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader'
 
 import Title from './components/Title';
 import TodoList from './containers/TodoList';
-import NewTodo from './containers/NewTodo';
+import AddTodo from './containers/AddTodo';
 
 const style = css`
 	padding: 0;
@@ -31,7 +31,7 @@ const App = () => (
 	<Container>
 		<Title>Saga todo</Title>
 		<TodoList />
-		<NewTodo />
+		<AddTodo />
 	</Container>
 );
 

@@ -1,10 +1,15 @@
-import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
 import TodoList from '../components/TodoList';
+import { toggleTodo } from '../reducers/todo';
 
-const todos = [
-	{id: 1, title: "Get milk", isDone: false },
-	{id: 2, title: "Reply to email", isDone: true},
-	{id: 3, title: "Look at calendar", isDone: false},
-];
+const mapStateToProps = (state) => ({
+	todos: state.todo.list,
+});
 
-export default () => <TodoList todos={todos} />;
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+	toggleTodo,
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
