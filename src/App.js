@@ -1,17 +1,11 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 
-import packageJson from '../package.json';
 import './normalize.css';
 
 const App = () => (
 	<div>
-		<h1>
-			{
-				packageJson.name
-					.replace(/-/g, ' ')
-					.replace(/^[a-z]| [a-z]/g, a => a.toUpperCase())}
-		</h1>
+		<h1>Node/React starter kit</h1>
 		<p>
 			<span>Entry point: </span>
 			<code>./src/index.js</code>
