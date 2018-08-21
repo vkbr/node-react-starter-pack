@@ -1,6 +1,9 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
-import { hot } from 'react-hot-loader'
+import { hot } from 'react-hot-loader';
+
+import packageJson from '../package.json';
+import './normalize.css';
 
 import Title from './components/Title';
 import TodoList from './containers/TodoList';
