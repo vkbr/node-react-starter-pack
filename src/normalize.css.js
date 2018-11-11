@@ -1,8 +1,8 @@
 import { injectGlobal } from 'react-emotion';
 
 injectGlobal`
-	body, html {
-		height: 100%;
+	body, html, #app {
+		min-height: 100%;
 		overflow: auto;
 		padding: 0;
 		margin: 0;
